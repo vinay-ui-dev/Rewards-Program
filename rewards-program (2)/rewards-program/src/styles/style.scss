@@ -1,0 +1,145 @@
+@import "~antd/dist/antd.css";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+}
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "left-panel right-panel"
+    "footer footer";
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 93% 7%;
+  background-color: white;
+}
+
+.left-panel {
+  grid-area: left-panel;
+  display: grid;
+  grid-template-areas:
+    "left-header"
+    "left-body";
+  grid-template-rows: 10% 90%;
+  background-color: white;
+}
+
+.right-panel {
+  grid-area: right-panel;
+  display: grid;
+  grid-template-areas:
+    "right-header"
+    "right-body";
+  grid-template-rows: 10% 90%;
+}
+.left-header {
+  grid-area: left-header;
+  background-color: cornflowerblue;
+  color: white;
+  h3 {
+    text-align: center;
+    margin: 30px auto;
+  }
+}
+
+.left-body {
+  grid-area: left-body;
+}
+.right-header {
+  grid-area: right-header;
+  background-color: cornflowerblue;
+  color: white;
+  h3 {
+    text-align: center;
+    margin: 30px auto;
+  }
+}
+
+.right-body {
+  grid-area: right-body;
+}
+.menu-item {
+  display: block;
+  width: 100%;
+  color: black;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(200, 127, 127);
+  }
+}
+.active {
+  background-color: rgb(195, 182, 186);
+}
+.footer {
+  grid-area: footer;
+  background-color: cornflowerblue;
+}
+.home {
+  color: black;
+}
+
+.array-comp {
+  color: black;
+}
+.photos-container {
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+img {
+  margin: 5px;
+  transition: all 1s;
+}
+img:hover {
+  transform: scale(1.1);
+}
+// @media only screen and (max-width: 600px) {
+//   .App {
+//     height: 100vh;
+//     display: grid;
+//     grid-template-areas:
+//       "right-panel"
+//       "footer";
+//     grid-template-rows: 93% 7%;
+//     background-color: whitesmoke;
+//   }
+//   .left-panel {
+//     display: none;
+//   }
+// }
+.image-desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  display: flex;
+  height: 60px;
+  background-color: white;
+  padding: 10px 120px;
+  input {
+    justify-content: space-around;
+    flex: 1;
+    font-size: medium;
+  }
+}
+.photosContainer {
+  background-color: white;
+  height: 100%;
+  overflow: scroll;
+}
+.select-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
